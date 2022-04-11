@@ -1,0 +1,113 @@
+.loader {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px;
+}
+
+.spinner {
+  z-index: 1;
+  height: 40px;
+  width: 40px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+[class^="ball-"] {
+  position: absolute;
+  display: block;
+  left: 30px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-animation: circleRotate 4s both infinite;
+          animation: circleRotate 4s both infinite;
+  -webkit-transform-origin: 0 250% 0;
+          transform-origin: 0 250% 0;
+}
+
+@-webkit-keyframes circleRotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(1440deg);
+            transform: rotate(1440deg);
+  }
+}
+
+@keyframes circleRotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(1440deg);
+            transform: rotate(1440deg);
+  }
+}
+
+.ball-1 {
+  z-index: -1;
+  background-color: #6a0a83;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 0.3, 0.9, 0.9);
+          animation-timing-function: cubic-bezier(0.5, 0.3, 0.9, 0.9);
+}
+
+.ball-2 {
+  z-index: -2;
+  background-color: #7b2a92;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 0.6, 0.9, 0.9);
+          animation-timing-function: cubic-bezier(0.5, 0.6, 0.9, 0.9);
+}
+
+.ball-3 {
+  z-index: -3;
+  background-color: #8d43a1;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 0.9, 0.9, 0.9);
+          animation-timing-function: cubic-bezier(0.5, 0.9, 0.9, 0.9);
+}
+
+.ball-4 {
+  z-index: -4;
+  background-color: #9e59b1;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.2, 0.9, 0.9);
+          animation-timing-function: cubic-bezier(0.5, 1.2, 0.9, 0.9);
+}
+
+.ball-5 {
+  z-index: -5;
+  background-color: #af6fc0;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.5, 0.9, 0.9);
+          animation-timing-function: cubic-bezier(0.5, 1.5, 0.9, 0.9);
+}
+
+.ball-6 {
+  z-index: -6;
+  background-color: #c086d0;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 1.8, 0.9, 0.9);
+          animation-timing-function: cubic-bezier(0.5, 1.8, 0.9, 0.9);
+}
+
+.ball-7 {
+  z-index: -7;
+  background-color: #d19cdf;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 2.1, 0.9, 0.9);
+          animation-timing-function: cubic-bezier(0.5, 2.1, 0.9, 0.9);
+}
+
+.ball-8 {
+  z-index: -8;
+  background-color: #e3b3ef;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 2.4, 0.9, 0.9);
+          animation-timing-function: cubic-bezier(0.5, 2.4, 0.9, 0.9);
+}
+/*# sourceMappingURL=loader.css.map */

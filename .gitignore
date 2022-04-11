@@ -1,0 +1,15 @@
+*.scss
+*.css.map
+/img/gallery_photo
+/img/horizontMaterials
+/img/rollMaterials
+/img/verticalMaterials
+/img/zebraMaterials
+rollMaterials.rar1
+/.vscode
+/ico
+/test
+constructPage.html
+constructStyle.css
+*.json
+scriptConstructor.js

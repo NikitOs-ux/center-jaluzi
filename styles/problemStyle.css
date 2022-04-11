@@ -1,0 +1,169 @@
+.problem {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px 10%;
+  background-color: #f7e6d2;
+}
+
+.problem-img {
+  width: 50%;
+}
+
+.problem-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.problem-container {
+  width: 50%;
+  text-align: center;
+  background-color: #f7e6d2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-title {
+  color: #333;
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+
+.container-subtitle {
+  font-size: 1.3rem;
+  color: #555;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.links-item {
+  margin-bottom: 10px;
+}
+
+.links-item a {
+  display: inline-block;
+  width: 40%;
+  padding: 20px 0;
+  background-color: #6a0a83;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.links-item .link-name {
+  position: relative;
+}
+
+.links-item .link-name::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #6a0a83;
+  right: -15px;
+  top: 50%;
+  -webkit-transform: rotate(45deg) translate(-66%);
+          transform: rotate(45deg) translate(-66%);
+}
+
+.links-item .link-material {
+  background-color: #390546;
+}
+
+@media (max-width: 1024px) {
+  .problem {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    height: auto;
+    padding: 20px 0;
+  }
+  .problem-img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+  }
+  .problem-img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-filter: brightness(0.4);
+            filter: brightness(0.4);
+  }
+  .problem-container {
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-color: transparent;
+    padding: 0;
+  }
+  .container-title {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .container-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 30px;
+  }
+  .container-links {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .links-item {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .links-item a {
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(108, 10, 133, 0.9);
+  }
+  .links-item .link-name::after {
+    content: '';
+    display: none;
+  }
+  .links-item .link-material {
+    background-color: rgba(81, 4, 100, 0.7);
+  }
+}
+/*# sourceMappingURL=problemStyle.css.map */
