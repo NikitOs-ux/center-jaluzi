@@ -164,13 +164,13 @@ display: block;
     top: -5px;
 }
 .basket-popup{
-    display: none;
+    /* display: none; */
     position: absolute;
     right: 0;
     top: 100%;  
     width: 0px;
     /* height: 0px; */
-    background-color: #721;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.308);
     /* z-index: -1; */
