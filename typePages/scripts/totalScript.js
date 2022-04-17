@@ -1,8 +1,13 @@
+let basketArray;
+function initBasketArray(){
+    localStorage.getItem('basket') !== null ? basketArray = JSON.parse(localStorage.getItem('basket')): basketArray =[];
+}
+
 let jsonResponse ='';
 let gridBlock = document.querySelector('.materials-wrapper');
 let infoBlock = document.querySelector('.info-block');
 let innerInfoBlock = document.querySelector('.info-material')
-let basketBtn = document.querySelector('.user-btn-basket');
+let btnBasket = document.querySelector('.user-btn-basket');
 let callMe = document.querySelector('.call_me');
 let link = document.querySelector('#resourse');
 let path = document.querySelector('#path');
@@ -14,6 +19,140 @@ link = link.dataset.resources;
 path = path.dataset.path;
 let selectedBlinds ='';
 
+// корзина
+
+let hideHead = document.querySelector('.header-hide');
+let head = document.querySelector('.header');
+let listItems = document.querySelector('.pop-list');
+let basketPop = document.querySelector('.basket-pop');
+let basketWrapper = document.querySelector('.pop-wrapper');
+let totalResult = document.querySelector('.total-result');
+let totalPrice = document.querySelector('.total-price');
+let emptyBasket = document.querySelector('.empty-basket');
+let clearList =  document.querySelector('.clear-list');
+let basketBtn = document.querySelector('.user-btn.basket');
+let listActive = document.querySelector('.list-active');
+let productCounter = document.querySelector('.product-counter');
+
+
+
+
+
+hideHead.addEventListener('click',()=>{
+    head.classList.toggle('header-active')
+})
+
+basketBtn.addEventListener('mouseenter', ()=>{
+    basketPop.classList.add('active')
+})
+basketPop.addEventListener('mouseleave', ()=>{
+    basketPop.classList.remove('active')
+})
+
+clearList.addEventListener('click', ()=>{
+    localStorage.removeItem('basket');
+    initBasketArray();
+    renderBasketList();
+})
+
+function deleteItem(id){
+    let basketList = JSON.parse(localStorage.getItem('basket'));
+    basketList.splice(id, 1);
+    localStorage.setItem('basket', JSON.stringify(basketList));
+    initBasketArray();
+    renderBasketList();
+}
+
+function getDeleteBtn(){
+    let deleteBtns = document.querySelectorAll('.item-delete');
+    // console.log(deleteBtns);
+    deleteBtns.forEach(element=>{
+            element.addEventListener('click', ()=>{
+                    deleteItem(element.dataset.id)
+                })
+            })
+}
+
+function renderBasketList(data = JSON.parse(localStorage.getItem('basket'))){    
+    console.log('data', data);
+    listItems.innerHTML = '';
+    let result = 0;
+    let countItem =0;
+    function totalResult(data){
+        return +data.sum.replace(/[^0-9]/g," ");
+    }
+
+    // если корзина пуста
+    if(data === null || data.length==0){
+        listActive.style.display='none';
+        emptyBasket.style.display = 'block';        
+        productCounter.style.visibility = 'hidden';
+    }
+    else{
+        console.log('succefull');
+        listActive.style.display='block';
+        emptyBasket.style.display = 'none';
+        data.forEach(element => {
+            result += totalResult(element);
+            let struct = `<div class="basket-item"  data-id="${countItem}">
+            <div class="item-wrapper">
+                <div class="item-img">
+                    <img src="${element.srcMainImg}" alt="">
+                </div>
+                <div class="item-text">
+                    <div class="text-title">${element.name}</div>
+                    <div class="text-size">
+                        <span class="size-width">${element.userWidth}</span>x<span class="size-heigth">${element.userHeigth}</span>см
+                    </div>
+                </div>
+                <div class="item-price">${element.sum}</div>
+                <div class="item-delete" data-id="${countItem}">
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+            </div>
+        </div> `;
+         listItems.insertAdjacentHTML('beforeend', struct);
+         countItem++;
+        });
+        getDeleteBtn();
+        totalPrice.innerHTML = result.toLocaleString() + '&#8381;';
+
+        productCounter.style.visibility = 'visible';
+        productCounter.innerHTML = countItem;
+    }
+}
+
+// конец корзины
+
+function createBasket(data){
+    console.log(basketArray);
+    basketArray.push(data);
+    localStorage.setItem('basket', JSON.stringify(basketArray));
+}
+
+
+// добавить в корзину
+btnBasket.addEventListener('click', ()=>{
+    let selectProduct = infoBlock.dataset.selectElement;
+    let objProducts = JSON.parse(localStorage.getItem('responceServer'));
+    for(let i=0; i<objProducts.length; i++){
+        if(objProducts[i].id == selectProduct){
+            objProducts[i].srcMainImg = `/img/${path}/${objProducts[i].srcMainImg}`;
+            
+            inputCardWidth.value === ''?objProducts[i].userWidth=100:objProducts[i].userWidth=inputCardWidth.value;
+
+            inputCardHeight.value === ''?objProducts[i].userHeigth=100:objProducts[i].userHeigth=inputCardHeight.value;
+
+            objProducts[i].sum = price.innerHTML;
+            createBasket(objProducts[i]);
+        }
+    }
+    infoBlock.classList.remove('active');
+    renderBasketList();
+})
+
+
+
 // функция очистки полей для ввода
 function cleanInput(){
     inputCard.forEach(element => {
@@ -22,15 +161,16 @@ function cleanInput(){
 }
 
 // события для рассчета стоимости
-inputCardHeight.addEventListener('change', (element)=>{
+inputCardHeight.addEventListener('input', (element)=>{
     price.innerHTML = (((element.target.value*0.01) * (inputCardWidth.value*0.01)) * selectedBlinds).toFixed(2) + '&#x20bd;';
 })
 
-inputCardWidth.addEventListener('change', (element)=>{
+// события для рассчета стоимости
+inputCardWidth.addEventListener('input', (element)=>{
     price.innerHTML = (((element.target.value*0.01) * (inputCardHeight.value*0.01)) * selectedBlinds).toFixed(2) + '&#x20bd;';
 })
 
-
+// закрыть блок с информацией 
 document.querySelector('.block-close').addEventListener('click',(event)=>{
     infoBlock.classList.remove('active');
     callMe.style.display = 'flex';
@@ -54,6 +194,7 @@ function getFullInfo(numEl){
 function renderMaterialCard(data){
     callMe.style.display = 'none';
     cleanInput();
+    infoBlock.dataset.selectElement = data.id;
     let mainImg = document.querySelector('.main-img');
     let miniImg = document.querySelector('.mini-img');
     mainImg.setAttribute('src', `/img/${path}/${data.srcMainImg}`);
@@ -113,6 +254,8 @@ function addItems(response){
             responceData = JSON.parse(responceData);                    // преобразовываем текстовые данные от сервера в формат JSON
             addItems(responceData)                                   // вызываем функцию для рендера таблицы
         }
+        initBasketArray();
+        renderBasketList();
     }
 
 

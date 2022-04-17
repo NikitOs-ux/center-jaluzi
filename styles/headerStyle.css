@@ -162,6 +162,7 @@ display: block;
     border-radius: 100%;
     left: 0;
     top: -5px;
+    visibility: hidden;
 }
 .basket-popup{
     /* display: none; */

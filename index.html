@@ -20,6 +20,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="styles/headerStyle.css">
     <link rel="stylesheet" href="styles/modalAndCall.css">
     <link rel="stylesheet" href="styles/couner/counter.css">
+    <link rel="stylesheet" href="/basketPOP/popUp.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Центр-Жалюзи</title>
     <!-- Yandex.Metrika counter -->
@@ -132,7 +133,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a href="/userBasket/index.html" class="user-btn basket"><i class="fa-solid fa-basket-shopping"></i>Корзина</a>
                 <div class="product-counter">0</div>
             </div>
-            <div class="basket-popup">
+            <!-- <div class="basket-popup">
                 <div class="basket-list">
 
                 </div>
@@ -140,13 +141,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="total-sum"><span>Итого:</span><span class="sum-num">19999руб</span></div>
                     <div class="total-btn"><a href="/userBasket/index.html" class="user-btn">Перейти в корзину</a></div>
                 </div>
-            </div>
+            </div> -->
         </div>
         
     </div>
     <div class="header-hide">
         <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
+
+    <!-- корзина всплывашка -->
+
+    <div class="basket-pop">
+        <div class="pop-wrapper">
+            <div class="pop-header">
+                <div class="header-wrapper">
+                    <span>Товары в корзине</span>
+                    <a href="#" class="clear-list">Очистить список</a>
+                </div>
+            </div>
+            <div class="pop-list"></div>
+            <div class="pop-total">
+                <div class="total-wrapper">
+                    <div class="total-result">
+                        <span>Итого:</span>
+                        <span class="total-price"></span> 
+                    </div>
+                    <a class="total-btnPOP" href="/userBasket/index.html">В корзину</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- container -->
     <div class="container">
        <!-- swiper -->
@@ -383,6 +408,7 @@ title="HotLog" alt="HotLog"></a>
     <script src="scripts/script.js"></script>
     <script src="scripts/modalScript.js"></script>
     <script src="scripts/headerScript.js"></script>
+    <script src="/basketPOP/popUpScript.js"></script>
 </body>
 </html>
 

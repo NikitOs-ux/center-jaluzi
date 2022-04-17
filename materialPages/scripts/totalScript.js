@@ -1,5 +1,4 @@
 let jsonResponse ='';
-// localStorage.removeItem('basket');
 
 let basketArray;
 localStorage.getItem('basket') !== null ? basketArray = JSON.parse(localStorage.getItem('basket')): basketArray =[];
@@ -35,9 +34,7 @@ btnBasket.addEventListener('click', ()=>{
             inputCardWidth.value === ''?objProducts[i].userWidth=100:objProducts[i].userWidth=inputCardWidth.value;
 
             inputCardHeight.value === ''?objProducts[i].userHeigth=100:objProducts[i].userHeigth=inputCardHeight.value;
-            
-            // objProducts[i].userWidth = inputCardWidth.value;
-            // objProducts[i].userHeigth = inputCardHeight.value;
+
             objProducts[i].sum = price.innerHTML;
             createBasket(objProducts[i]);
         }
@@ -58,6 +55,7 @@ inputCardHeight.addEventListener('input', (element)=>{
 
 })
 
+// события для рассчета стоимости
 inputCardWidth.addEventListener('input', (element)=>{
     price.innerHTML = (((element.target.value*0.01) * (inputCardHeight.value*0.01)) * selectedBlinds).toFixed(0) + '&#x20bd;';
 })
@@ -109,7 +107,7 @@ function renderMaterialCard(data){
     selectedBlinds = +data.price;
 }
 
-
+// переключение страниц
 function itemsPage(page){
     window.scrollBy(0,-window.innerHeight);
     document.querySelector('.loader').style.display = 'none';
@@ -133,6 +131,7 @@ function itemsPage(page){
     } 
 }
 
+// количество страниц
 function countPage(){
     let listItems = JSON.parse(localStorage.getItem("responceServer"));
     listItems = Math.ceil(listItems.length / countItems);
