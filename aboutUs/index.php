@@ -107,7 +107,10 @@
     </div>
 
    <!-- шапка страницы -->
-   <div class="header">
+
+   <?require $_SERVER['DOCUMENT_ROOT'].'/header.php'?>
+
+   <!-- <div class="header">
     <div class="header-logo">
         <a href="/index.html" class="header-title"><h2><span>Центр</span>Жалюзи</h2></a>
     </div>
@@ -126,16 +129,16 @@
             <li><a href="/galleryPage/index.html" class="menu-item">Наши работы</a></li>
             <li><a href="/aboutUs/index.html" class="menu-item">о нас</a></li>
        </ul>
-    </div>
+    </div> -->
     <!-- <div class="header-user-panel">
         <a href="pageMasters/pageMasters.html" class="user-btn measurer"><i class="fas fa-ruler"></i>Личный кабинет</a>
     </div> -->
-    </div>
+    <!-- </div> -->
 
     <!-- кнопка скрыть меню -->
-    <div class="header-hide">
+    <!-- <div class="header-hide">
         <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
+    </div> -->
 
     <!-- контейнер -->
     <div class="container">
