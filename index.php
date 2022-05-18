@@ -7,8 +7,7 @@
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MT2NDSC');
-</script>
+})(window,document,'script','dataLayer','GTM-MT2NDSC');</script>
 <!-- End Google Tag Manager -->
 <script src="https://kit.fontawesome.com/95bd7eb798.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">  
@@ -48,9 +47,92 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
     <!-- modal -->
+<div class="modal">
+        <div class="modal-window">
+            <div class="modal-content">
+                <div class="modal-title basic-title">Записаться на замер</div>
+                <div class="modal-form">
+                    <form action="POST" name="callMaster">
+                    <input class="mandatoty_attribute"  type="text" name="name" id="" placeholder="Имя* ">
+                    <input class="mandatoty_attribute"  type="text" name="family" id="" placeholder="Фамилия*">
+                    <input class="mandatoty_attribute"  type="text" name="addres" id="" placeholder="Адрес*">
+                    <input class="mandatoty_attribute"  type="number" name="telephone" placeholder="Номер для связи*">
+                    <div class="select-block">
+                        <select class="modal-select mandatoty_attribute" name="type" id="" >
+                            <option value="" selected disabled>Вид штор*</option>
+                            <optgroup label="Горизонтальные">
+                                <option value="горизонтальные дерево">Деревянный</option>
+                                <option value="горизонтальные пластик">Пластиковые</option>
+                            </optgroup>
+                            <optgroup label="Вертикальные">
+                                <option value="вертикальные дерево">Деревянные</option>
+                                <option value="вертикальные пластик">Пластиковые</option>
+                                <option value="вертикальные ткань">Тканевые</option>
+                            </optgroup>
+                            <optgroup label="Рулонные">
+                                <option value="Рулонные Классика LVT">Классика LVT</option>
+                                <option value="Рулонные UNI">UNI</option>
+                                <option value="Рулонные MINI">MINI</option>
+                            </optgroup>
+                            <optgroup label='Рулонные "Зебра"'>
+                                <option value="Рулонные Зебра Классика LVT">Классика LVT</option>
+                                <option value="Рулонные Зебра UNI">UNI</option>
+                                <option value="Рулонные Зебра MINI">MINI</option>
+                            </optgroup>
+                            
+                        </select>
+                    </div>
+                    <div class="modal-date">Укажите в желаемое время</div>
+                    <input type="date" name="date">
+                    <input type="time" name="time">
+                    <textarea name="comment" cols="30" rows="10" placeholder="Оставьте ваш комментарий"></textarea>
+                </div>
+                <div class="modal-submit">
+                    <div class="dop-info">
+                        <span>&#8727; - поле обязательное для ввода</span>
+                    </div>
+                    <div class="submit-btn user-btn">Отправить</div>
+                </div>
+            </form>
+            </div>
+            <div class="modal-close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </div>
 
-<??>
-<div class="container">
+    <!-- call -->
+    <div class="call_me">
+        <div class="call_ico">
+            <i class="fas fa-phone"></i>
+        </div>
+    </div>
+    <?require "header.php"?>
+    <!-- корзина всплывашка -->
+
+    <div class="basket-pop">
+        <div class="pop-wrapper">
+            <div class="pop-header">
+                <div class="header-wrapper">
+                    <span>Товары в корзине</span>
+                    <a href="#" class="clear-list">Очистить список</a>
+                </div>
+            </div>
+            <div class="pop-list"></div>
+            <div class="pop-total">
+                <div class="total-wrapper">
+                    <div class="total-result">
+                        <span>Итого:</span>
+                        <span class="total-price"></span> 
+                    </div>
+                    <a class="total-btnPOP" href="/userBasket/index.html">В корзину</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- container -->
+    <div class="container">
        <!-- swiper -->
         <div class="swiper">
             <div class="swiper-wrapper">
@@ -96,7 +178,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           <div class="type-content">
                               <h2>Горизонтальные</h2>
                               <p>Позволяют регулировать поток света и воздуха, легко моются и прекрасно подходят к любому интерьерному стилю</p>
-                              <a href="/typePages/horizontPage/horizontPage.php" class="user-btn">Подробнее</a>
+                              <a href="/typePages/horizontPage/horizontPage.html" class="user-btn">Подробнее</a>
                           </div>
                        </div>
                    </div>
@@ -108,7 +190,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="type-content">
                             <h2>Вертикальные</h2>
                             <p>Практичное решение, которое надежно защитит помещение от ярких солнечных лучей и станет оригинальным предметом дизайна</p>
-                            <a href="/typePages/verticalPage/verticalPage.php" class="user-btn">Подробнее</a>
+                            <a href="/typePages/verticalPage/verticalPage.html" class="user-btn">Подробнее</a>
                         </div>
                        </div>
                    </div>
@@ -120,7 +202,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="type-content">
                             <h2>Рулонные</h2>
                             <p>Практичный, стильный и недорогой вариант солнцезащитного декора</p>
-                            <a href="/typePages/rollPage/rollPage.php" class="user-btn">Подробнее</a>
+                            <a href="/typePages/rollPage/rollPage.html" class="user-btn">Подробнее</a>
                         </div>
                        </div>
                    </div>
@@ -132,7 +214,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="type-content">
                             <h2>Рулонные "Зебра"</h2>
                             <p>Практичная и удобная в использовании система для защиты от солнечных лучей</p>
-                            <a href="/typePages/zebraPage/zebraPage.php" class="user-btn">Подробнее</a>
+                            <a href="/typePages/zebraPage/zebraPage.html" class="user-btn">Подробнее</a>
                         </div>
                        </div>
                    </div>
@@ -172,15 +254,115 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </a>
         </div>
-    </div>  
+       
+    </div>
+     <!-- order -->
+     <div class="block order">
+        <div class="order-wrapper">
+            <h2 class="discription-subtitle">Как заказать жалюзи?</h2>
+            <div class="order-step-wrapper">
+                <div class="step-item">
+                    <div class="step-img">
+                        <img src="/img/order/order_1.jpg" alt="выбор материала">
+                        <div class="step-num">
+                            <span>01</span>
+                        </div>
+                    </div>
+                    <p class="discription-paragraph">
+                        Выбрать систему и материал на сайте
+                    </p>
+                </div>
+                <div class="step-item">
+                    <div class="step-img">
+                        <img src="/img/order/order_2.jpg" alt="оформление заявки">
+                        <div class="step-num">
+                            <span>02</span>
+                        </div>
+                    </div>
+                    <p class="discription-paragraph">
+                        Оформить заявку на бесплатный замер
+                    </p>
+                </div>
+                <div class="step-item">
+                    <div class="step-img">
+                        <img src="/img/order/order_3.jfif" alt="определние с материалом">
+                        <div class="step-num">
+                            <span>03</span>
+                        </div>
+                    </div>
+                    <p class="discription-paragraph">
+                        Определиться с материалом и фурнитурой
+                    </p>
+                </div>
+                <div class="step-item">
+                    <div class="step-img">
+                        <img src="/img/order/order_4.jpg" alt="подписать договор">
+                        <div class="step-num">
+                            <span>04</span>
+                        </div>
+                    </div>
+                    <p class="discription-paragraph">
+                        Получить детальный расчет и подписать договор
+                    </p>
+                </div>
+                <div class="step-item">
+                    <div class="step-img">
+                        <img src="/img/order/order_5.jpg" alt="монтаж">
+                        <div class="step-num">
+                            <span>05</span>
+                        </div>
+                    </div>
+                    <p class="discription-paragraph">
+                        Согласовать удобную дату монтажа
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer-text">
+            <h2>Наши контакты</h2>
+            <div class="social">
+                <div class="address">Ул. Малахова 83<span class="phone">т. 69-88-96</span></div>
+                <div class="address">Пр-т Космонавтов 8/2<span class="phone">т. 53-38-30</span></div>
+                <div class="address">Email:<span class="phone">jaluzi22@mail.ru</span></div>
+                <div class="address">Instagram:<span class="phone">jaluzicentr</span></div>
+            </div>
+
+        </div>
+        <div class="footer-map">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8175d794635acb30806698bb23e5312ce6d6bea577924588155d58260f0f2c28&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <div class="counter-block">
+        <!--LiveInternet counter--><a href="https://www.liveinternet.ru/click"
+target="_blank"><img id="licnt1EE4" width="88" height="31" style="border:0"
+title="LiveInternet: показано число просмотров и посетителей за 24 часа"
+src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+alt=""/></a><script>(function(d,s){d.getElementById("licnt1EE4").src=
+"https://counter.yadro.ru/hit?t52.8;r"+escape(d.referrer)+
+((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+(s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+";h"+escape(d.title.substring(0,150))+";"+Math.random()})
+(document,screen)</script><!--/LiveInternet-->
+        <!-- HotLog -->
+<span id="hotlog_counter"></span>
+<span id="hotlog_dyn"></span>
+<script type="text/javascript"> var hot_s = document.createElement('script');
+hot_s.type = 'text/javascript'; hot_s.async = true;
+hot_s.src = 'http://js.hotlog.ru/dcounter/2599790.js';
+hot_d = document.getElementById('hotlog_dyn');
+hot_d.appendChild(hot_s);
+</script>
+<noscript>
+<a href="http://click.hotlog.ru/?2599790" target="_blank">
+<img src="http://hit27.hotlog.ru/cgi-bin/hotlog/count?s=2599790&im=202" border="0"
+title="HotLog" alt="HotLog"></a>
+</noscript>
+<!--/HotLog --> 
 </div>
-<?
-require "modules/application_modal.php";
-require "modules/header.php";     
-require "modules/order_block.php";     
-require "modules/footer.php";     
-require "modules/counter_block.php";     
-?>
     <script src="swiper/swiper-bundle.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/modalScript.js"></script>
