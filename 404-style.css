@@ -1,0 +1,274 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+body {
+  background: #5A657A;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+body h1 {
+  margin-bottom: 20px;
+}
+
+body p {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+body a {
+  color: #FBD160;
+}
+
+svg {
+  display: block;
+  margin: 0 auto;
+  overflow: visible !important;
+}
+.container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+}
+svg #robot_1_ {
+  -webkit-animation-name: verticalAnimation;
+          animation-name: verticalAnimation;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+svg #light_1_ {
+  -webkit-animation-name: blinkLight;
+          animation-name: blinkLight;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: steps(2);
+          animation-timing-function: steps(2);
+}
+
+svg #leftEye_1_, svg #rightEye_1_ {
+  -webkit-animation-name: blinkEye;
+          animation-name: blinkEye;
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+svg #leftArm_1_ {
+  -webkit-animation-name: moveLeftArm;
+          animation-name: moveLeftArm;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-transform-origin: 50% 10%;
+          transform-origin: 50% 10%;
+  -webkit-transition: all;
+  transition: all;
+}
+
+svg #rightArm_1_ {
+  -webkit-animation-name: moveRightArm;
+          animation-name: moveRightArm;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-transform-origin: 50% 10%;
+          transform-origin: 50% 10%;
+}
+
+svg #shadow_1_ {
+  -webkit-animation-name: shadowAnimation;
+          animation-name: shadowAnimation;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-transform-origin: 50%;
+          transform-origin: 50%;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+  100% {
+    -webkit-transform: rotate(170deg);
+            transform: rotate(170deg);
+  }
+}
+
+@keyframes wave {
+  0% {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+  100% {
+    -webkit-transform: rotate(170deg);
+            transform: rotate(170deg);
+  }
+}
+
+@-webkit-keyframes moveLeftArm {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+}
+
+@keyframes moveLeftArm {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+}
+
+@-webkit-keyframes moveRightArm {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+}
+
+@keyframes moveRightArm {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+}
+
+@-webkit-keyframes shadowAnimation {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: .4;
+  }
+  100% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+    opacity: .6;
+  }
+}
+
+@keyframes shadowAnimation {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: .4;
+  }
+  100% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+    opacity: .6;
+  }
+}
+
+@-webkit-keyframes verticalAnimation {
+  0% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+
+@keyframes verticalAnimation {
+  0% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+
+@-webkit-keyframes blinkLight {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blinkLight {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes blinkEye {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  4% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes blinkEye {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  4% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+/*# sourceMappingURL=404-style.css.map */

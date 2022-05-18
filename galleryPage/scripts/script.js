@@ -16,7 +16,6 @@ function openImg(event){
     img.setAttribute('src', event.target.src);
     photoContent.appendChild(img);
     modalPhoto.style.display = 'flex';
-
 }
 
 // вывод изображений на страницу
@@ -43,7 +42,7 @@ function generatePaggination(count){
         let step = i*20+1;
         let pagBtn = document.createElement('div');
         pagBtn.classList.add('paggination-button');
-        pagBtn.dataset.min = step;
+        pagBtn.dataset.min = step; 
         pagBtn.dataset.max = step+19;
         pagBtn.innerText = i+1;
         pagginationWrapper.appendChild(pagBtn);

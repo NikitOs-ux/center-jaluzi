@@ -10,10 +10,6 @@ let clearList =  document.querySelector('.clear-list');
 let basketBtn = document.querySelector('.user-btn.basket');
 let productCounter = document.querySelector('.product-counter');
 
-
-
-
-
 hideHead.addEventListener('click',()=>{
     head.classList.toggle('header-active')
 })

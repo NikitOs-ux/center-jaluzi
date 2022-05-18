@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="/styles/infoBlock.css"> 
     <link rel="stylesheet" href="/styles/loader/loader.css">
     <link rel="stylesheet" href="/styles/couner/counter.css">
+    <link rel="stylesheet" href="/basketPOP/popUp.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>   
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
@@ -113,35 +114,7 @@
     </div>
 
     <!-- шапка страницы  -->
-    <div class="header">
-        <div class="header-logo">
-            <a href="/index.html" class="header-title"><h2><span>Центр</span>Жалюзи</h2></a>
-        </div>
-        <div class="header-menu">
-           <ul>
-                <li><a href="/index.html" class="menu-item">Главная</a></li>
-                <li><a href="#" class="menu-item menu-item-catalog">Каталог</a>
-                    <ul class="catalog-submenu">
-                        <li><a href="/typePages/horizontPage/horizontPage.html">Горизонтальные</a></li>
-                        <li><a href="/typePages/verticalPage/verticalPage.html">Вертикальные</a></li>
-                        <li><a href="/typePages/rollPage/rollPage.html">Рулонные</a></li>
-                        <li><a href="/typePages/zebraPage/zebraPage.html">Рулонные "Зебра"</a></li>
-                    </ul>
-                </li>
-                <li><a href="/servicePage/index.html" class="menu-item">Оплата и услуги</a></li>
-                <li><a href="/galleryPage/index.html" class="menu-item">Наши работы</a></li>
-                <li><a href="/aboutUs/index.html" class="menu-item">О нас</a></li>
-           </ul>
-        </div>
-        <!-- <div class="header-user-panel">
-            <a href="pageMasters/pageMasters.html" class="user-btn measurer"><i class="fas fa-ruler"></i>Личный кабинет</a>
-        </div> -->
-    </div>
-
-    <!-- кнопка скрыть меню -->
-    <div class="header-hide">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
+    <?require $_SERVER['DOCUMENT_ROOT'].'/header.php'?>
 
     <!-- контейнер -->
     <div class="container">
@@ -447,7 +420,7 @@ title="HotLog" alt="HotLog"></a>
 <!--/HotLog --> 
 </div>
     <script src="/scripts/modalScript.js"></script>
-    <script src="/scripts/headerScript.js"></script>
+<!--    <script src="/scripts/headerScript.js"></script>-->
     <script src="/typePages/scripts/totalScript.js"></script>
     <!-- <script src="script.js"></script> -->
 </body>

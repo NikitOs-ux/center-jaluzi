@@ -1,41 +1,37 @@
-.modal {
+/* modal */
+.modal{
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.616);
     backdrop-filter: blur(10px);
     position: fixed;
-    left: 0;
-    top: 0;
     z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all .3s ease-in;
-    transform: translate(0, -100%);
+    transform: translate(0,-100%);
     opacity: 0;
     pointer-events: none;
 }
-
-.modal.active {
-    transform: translate(0, 0);
+.modal.active{
+    transform: translate(0,0);
     opacity: 1;
     width: 100%;
     height: 100vh;
     pointer-events: stroke;
-
+    
 }
-
 @keyframes vibro {
-    from{ 
+    from{
         transform: translate(10px, 0);
     }
-
-    to {
+    to{
         transform: translate(-10px, 0);
     }
 }
 
-.modal-window {
+.modal-window{
     width: 40%;
     height: auto;
     background-color: #fff;
@@ -46,28 +42,25 @@
     overflow: hidden;
 }
 
-.modal-window.input-error {
+.modal-window.input-error{
     animation: vibro .1s 3 ease-in-out;
 }
-
-.modal-title {
+.modal-title{
     font-size: 1.8em;
     width: 100%;
     text-align: center;
     margin: 0;
     padding: 40px;
 }
-
-.modal-form {
+.modal-form{
     width: 100%;
     height: 100%;
-    padding: 10px 50px;
+    padding:10px 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
-input {
+input{
     width: 100%;
     height: 40px;
     margin-bottom: 20px;
@@ -78,21 +71,16 @@ input {
     color: var(--colorBasic);
     border-bottom: 2px solid var(--colorBasic);
 }
-
-input:focus {
-    background-color: rgba(107, 10, 131, 0.1);
+input:focus{
+    background-color: rgba(238, 238, 238, 0.5);
     border-radius: 10px;
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
-
-input:hover,
-select:hover,
-textarea:hover {
-    background-color: rgba(107, 10, 131, 0.1);
+input:hover, select:hover,textarea:hover{
+    background-color: rgba(7, 141, 251, 0.1);
     border-radius: 10px;
 }
-
-.modal-date {
+.modal-date{
     width: 100%;
     text-align: center;
     font-size: 1.1em;
@@ -101,21 +89,16 @@ textarea:hover {
     opacity: .4;
     text-transform: uppercase;
 }
-
-input[type=date],
-input[type=time] {
+input[type=date], input[type=time]{
     width: 45%;
 }
-
-input[type=time] {
+input[type=time]{
     float: right;
 }
-
-input[type=number]::-webkit-inner-spin-button {
+input[type=number]::-webkit-inner-spin-button{
     appearance: none;
 }
-
-textarea {
+textarea{
     border: none;
     width: 100%;
     border-bottom: 2px solid var(--colorBasic);
@@ -124,38 +107,32 @@ textarea {
     height: 150px;
     padding: 10px 15px;
 }
-
-textarea:focus {
+textarea:focus{
     background-color: rgba(238, 238, 238, 0.5);
     border-radius: 10px;
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
-
-.modal-submit {
+.modal-submit{
     padding: 0 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-.submit-btn {
+.submit-btn{
     width: 30%;
     text-align: center;
     margin: 30px 0;
     cursor: pointer;
 }
-
-.submit-btn:active {
+.submit-btn:active{
     background-color: yellowgreen;
     box-shadow: 0 0 5px rgb(116, 160, 28);
 }
-
-.select-block {
+.select-block{
     width: 100%;
     position: relative;
 }
-
-.select-block::after {
+.select-block::after{
     content: '';
     position: absolute;
     top: 30%;
@@ -166,11 +143,10 @@ textarea:focus {
     border-left: 2px solid var(--colorBasic);
     border-bottom: 2px solid var(--colorBasic);
     transform: rotate(-45deg);
-    z-index: 1000000;
+    z-index: 1000000;   
     pointer-events: none;
 }
-
-.modal-select {
+.modal-select{
     border: none;
     width: 100%;
     font-size: 1.2em;
@@ -180,16 +156,14 @@ textarea:focus {
     font-weight: medium;
     color: rgba(0, 0, 0, 0.7);
     border-radius: 5px;
-    border-bottom: 2px solid var(--colorBasic);
+    border-bottom:2px solid var(--colorBasic) ;
     appearance: none;
-
+    
 }
-
-.modal-select:focus {
+.modal-select:focus{
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
-
-.modal-close {
+.modal-close{
     position: absolute;
     top: 5px;
     right: 5px;
@@ -201,26 +175,22 @@ textarea:focus {
     justify-content: center;
     align-items: center;
 }
-
-.modal-close i {
+.modal-close i{
     color: rgba(0, 0, 0, 0.602);
-    transform: scale(1.3, 1.3);
+    transform: scale(1.3,1.3);
 }
-
-.modal-close i:hover {
+.modal-close i:hover{
     color: red;
 }
 
-.input-error {
+.input-error{
     border-color: red;
 
 }
-
-.dop-info {
+.dop-info{
     opacity: .4;
 }
-
-.call_me {
+.call_me{
     width: 80px;
     height: 80px;
     position: absolute;
@@ -228,31 +198,28 @@ textarea:focus {
     right: 50px;
     bottom: 80px;
     position: fixed;
-    z-index: 10;
+    z-index: 1000;
     border-radius: 50%;
     border: 2px white solid;
     box-shadow: 0 0 0px 10px rgba(126, 252, 0, 0.514),
-        0px 0px 10px 20px #0000000f;
+    0px 0px 10px 20px #0000000f;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     transition: all .2s ease;
 }
-
-.call_me:hover {
-    transform: scale(0.9, 0.9);
+.call_me:hover{
+    transform: scale(0.9,0.9);
     box-shadow: 0 0 0px 10px rgba(126, 252, 0, 0.514),
-        0px 0px 10px 15px #0000001f;
+    0px 0px 10px 15px #0000001f;
 }
-
-.call_ico {
+.call_ico{
     color: white;
-    transform: scale(2, 2);
+    transform: scale(2,2);
     position: relative;
 }
-
-.call_me::after {
+.call_me::after{
     content: '';
     position: absolute;
     width: 100%;
@@ -266,91 +233,60 @@ textarea:focus {
 }
 
 @keyframes pulse {
-    0% {
+    0%{
         transform: scale(1);
         opacity: 0;
     }
-
-    20% {
+    20%{
         transform: scale(2);
         opacity: 0.4;
     }
-
-    100% {
+    100%{
         transform: scale(2.4);
         opacity: 0.0;
     }
-
+    
 }
 
-@media(max-width: 1400px){
-    .modal-window {
-        transform: scale(.7);
+@media(max-width: 1400px) {
+    .modal-window{
+    transform: scale(.7);
     }
-
-    .slider {
+    .slider{
         height: 100vh;
     }
-
-    .slider-img {
+    .slider-img{
         object-fit: cover;
     }
-
-    .header {
+    .header{
         font-size: 0.8em;
         width: 100%;
         padding: 5px 10px;
     }
-
-    .slider-control {
+    .slider-control{
         display: none;
     }
-    .call_me {
+    .header-menu{
+        width: auto;
+        float: none ;
+    }
+    .call_me{
         width: 50px;
         height: 50px;
         bottom: 30px;
         right: 30px;
     }
-
-    .call_ico {
+    .call_ico{
         transform: scale(1.5);
-    }
-
-    .user-btn {
+    } 
+    .user-btn{
         float: left;
     }
-
-    .header-user-panel {
+    .header-user-panel{
         float: left;
     }
-
-    .slider-title {
+    .slider-title{
         font-size: 24px;
         bottom: 10%;
-    }
-}
-
-@media(max-width: 1024px){
-    .modal{
-        background: transparent;
-        backdrop-filter: none;
-    }
-    .modal-window{
-        width: 100%;
-        height: 100vh;
-        transform: scale(1);
-        border-radius: 0;
-        background-color: rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(5px);
-        overflow-y: auto;
-    }
-    .modal-form form input, .modal-form form select, .modal-form form textarea{
-        background-color: rgba(255, 255, 255, 0.5);
-    }
-    .submit-btn.user-btn{
-        float: none;
-        width: auto;
-        padding: 10px 20px;
-        font-size: 1 rem;
     }
 }

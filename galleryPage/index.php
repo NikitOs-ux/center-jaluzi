@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="/styles/loader/loader.css">
     <link rel="stylesheet" href="/styles/couner/counter.css">
+    <link rel="stylesheet" href="/basketPOP/popUp.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Наши работы</title>
     <!-- Yandex.Metrika counter -->
@@ -44,68 +45,6 @@
 </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- кнопка вызова -->
-    <div class="call_me">
-        <div class="call_ico">
-            <i class="fas fa-phone"></i>
-        </div>
-    </div>
-
-    <!-- модальное окно заявки -->
-     <div class="modal">
-        <div class="modal-window">
-            <div class="modal-content">
-                <div class="modal-title basic-title">Записаться на замер</div>
-                <div class="modal-form">
-                    <form action="POST" name="callMaster">
-                    <input class="mandatoty_attribute"  type="text" name="name" id="" placeholder="Имя* ">
-                    <input class="mandatoty_attribute"  type="text" name="family" id="" placeholder="Фамилия*">
-                    <input class="mandatoty_attribute"  type="text" name="addres" id="" placeholder="Адрес*">
-                    <input class="mandatoty_attribute"  type="number" name="telephone" placeholder="Номер для связи*">
-                    <div class="select-block">
-                        <select class="modal-select mandatoty_attribute" name="type" id="" >
-                            <option value="" selected disabled>Вид штор*</option>
-                            <optgroup label="Горизонтальные">
-                                <option value="горизонтальные дерево">Деревянный</option>
-                                <option value="горизонтальные пластик">Пластиковые</option>
-                            </optgroup>
-                            <optgroup label="Вертикальные">
-                                <option value="вертикальные дерево">Деревянные</option>
-                                <option value="вертикальные пластик">Пластиковые</option>
-                                <option value="вертикальные ткань">Тканевые</option>
-                            </optgroup>
-                            <optgroup label="Рулонные">
-                                <option value="Рулонные Классика LVT">Классика LVT</option>
-                                <option value="Рулонные UNI">UNI</option>
-                                <option value="Рулонные MINI">MINI</option>
-                            </optgroup>
-                            <optgroup label='Рулонные "Зебра"'>
-                                <option value="Рулонные Зебра Классика LVT">Классика LVT</option>
-                                <option value="Рулонные Зебра UNI">UNI</option>
-                                <option value="Рулонные Зебра MINI">MINI</option>
-                            </optgroup>
-                            
-                        </select>
-                    </div>
-                    <div class="modal-date">Укажите в желаемое время</div>
-                    <input type="date" name="date">
-                    <input type="time" name="time">
-                    <textarea name="comment" cols="30" rows="10" placeholder="Оставьте ваш комментарий"></textarea>
-                </div>
-                <div class="modal-submit">
-                    <div class="dop-info">
-                        <span>&#8727; - поле обязательное для ввода</span>
-                    </div>
-                    <div class="submit-btn user-btn">Отправить</div>
-                </div>
-            </form>
-            </div>
-            <div class="modal-close">
-                <i class="fas fa-times"></i>
-            </div>
-        </div>
-    </div>
-
     <!-- модальное окно фотографии -->
     <div class="modal-photo">
         <div class="close">
@@ -114,36 +53,10 @@
         <div class="content"></div>
     </div>
 
-    <!-- шапка страницы -->
-    <div class="header">
-        <div class="header-logo">
-            <a href="/index.html" class="header-title"><h2><span>Центр</span>Жалюзи</h2></a>
-        </div>
-        <div class="header-menu">
-           <ul>
-                <li><a href="/index.html" class="menu-item">Главная</a></li>
-                <li><a href="#" class="menu-item menu-item-catalog">Каталог</a>
-                    <ul class="catalog-submenu">
-                        <li><a href="/typePages/horizontPage/horizontPage.html">Горизонтальные</a></li>
-                        <li><a href="/typePages/verticalPage/verticalPage.html">Вертикальные</a></li>
-                        <li><a href="/typePages/rollPage/rollPage.html">Рулонные</a></li>
-                        <li><a href="/typePages/zebraPage/zebraPage.html">Рулонные "Зебра"</a></li>
-                    </ul>
-                </li>
-                <li><a href="/servicePage/index.html" class="menu-item">Оплата и услуги</a></li>
-                <li><a href="/galleryPage/index.html" class="menu-item">Наши работы</a></li>
-                <li><a href="/aboutUs/index.html" class="menu-item">о нас</a></li>
-           </ul>
-        </div>
-        <!-- <div class="header-user-panel">
-            <a href="pageMasters/pageMasters.html" class="user-btn measurer"><i class="fas fa-ruler"></i>Личный кабинет</a>
-        </div> -->
-    </div>
-
-    <!-- кнопка скрыть меню -->
-    <div class="header-hide">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
+    <?
+    require $_SERVER['DOCUMENT_ROOT'].'/modules/application_modal.php';
+    require $_SERVER['DOCUMENT_ROOT'].'/header.php';
+    ?>
 
     <!-- тело галлереи -->
     <div class="gallery">
@@ -231,21 +144,8 @@
     </div>
 
     <!-- подвал -->
-    <div class="footer">
-        <div class="footer-text">
-            <h2>Наши контакты</h2>
-            <div class="social">
-                <div class="address">Ул. Малахова 83<span class="phone">т. 69-88-96</span></div>
-                <div class="address">Пр-т Космонавтов 8/2<span class="phone">т. 53-38-30</span></div>
-                <div class="address">Email:<span class="phone">jaluzi22@mail.ru</span></div>
-                <div class="address">Instagram:<span class="phone">jaluzicentr</span></div>
-            </div>
-
-        </div>
-        <div class="footer-map">
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8175d794635acb30806698bb23e5312ce6d6bea577924588155d58260f0f2c28&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
-        </div>
-    </div>
+    <?require $_SERVER['DOCUMENT_ROOT'].'/footer.php'?>
+    
     <div class="counter-block">
         <!--LiveInternet counter--><a href="https://www.liveinternet.ru/click"
 target="_blank"><img id="licnt1EE4" width="88" height="31" style="border:0"
@@ -273,8 +173,8 @@ title="HotLog" alt="HotLog"></a>
 </noscript>
 <!--/HotLog --> 
 </div>
-    <script src="/scripts/modalScript.js"></script>
-    <script src="/scripts/headerScript.js"></script>
-    <script src="scripts/script.js"></script>
+<script src="/scripts/modalScript.js" defer></script>
+<script src="/scripts/headerScript.js" defer></script>
+<script src="scripts/script.js" defer></script>
 </body>
 </html>

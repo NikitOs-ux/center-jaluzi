@@ -12,18 +12,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог штор "Зебра"</title>
-        <link rel="stylesheet" href="/styles/style.css">
-        <link rel="stylesheet" href="/styles/orderStyle.css">
-        <link rel="stylesheet" href="/styles/headerStyle.css">
-        <link rel="stylesheet" href="/typePages/styleTypes/rollPageStyle.css">
-        <link rel="stylesheet" href="/styles/footerStyle.css">
-        <link rel="stylesheet" href="/styles/problemStyle.css">
-        <link rel="stylesheet" href="/styles/modalAndCall.css">
-        <link rel="stylesheet" href="/styles/infoBlock.css">
-        <link rel="stylesheet" href="/styles/loader/loader.css">
-        <link rel="stylesheet" href="/styles/couner/counter.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>  
+    <title>Вертикальные жалюзи</title>
+    <script src="https://kit.fontawesome.com/95bd7eb798.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/orderStyle.css">
+    <link rel="stylesheet" href="/styles/headerStyle.css">
+    <link rel="stylesheet" href="/typePages/styleTypes/rollPageStyle.css">
+    <link rel="stylesheet" href="/styles/footerStyle.css">
+    <link rel="stylesheet" href="/styles/problemStyle.css">
+    <link rel="stylesheet" href="/styles/modalAndCall.css">
+    <link rel="stylesheet" href="/styles/infoBlock.css">
+    <link rel="stylesheet" href="/styles/loader/loader.css">
+    <link rel="stylesheet" href="/styles/couner/counter.css">
+    <link rel="stylesheet" href="/basketPOP/popUp.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>   
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -38,7 +40,7 @@
         });
         </script>
         <noscript><div><img src="https://mc.yandex.ru/watch/88017919" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter --> 
+    <!-- /Yandex.Metrika counter -->
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -47,8 +49,8 @@
 </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <input type="hidden" data-resources="/serverScript/getZebraMaterials.php" id="resourse">
-    <input type="hidden" data-path="zebraMaterials" id="path">
+    <input type="hidden" data-resources="/serverScript/getVerticalMaterials.php" id="resourse">
+    <input type="hidden" data-path="verticalMaterials" id="path">
 
     <!-- кнопка вызова -->
     <div class="call_me">
@@ -112,125 +114,81 @@
         </div>
     </div>
 
-    <!-- Шапка страницы  -->
-    <div class="header">
-        <div class="header-logo">
-            <a href="/index.html" class="header-title"><h2><span>Центр</span>Жалюзи</h2></a>
-        </div>
-        <div class="header-menu">
-           <ul>
-                <li><a href="/index.html" class="menu-item">Главная</a></li>
-                <li><a href="#" class="menu-item menu-item-catalog">Каталог</a>
-                    <ul class="catalog-submenu">
-                        <li><a href="/typePages/horizontPage/horizontPage.html">Горизонтальные</a></li>
-                        <li><a href="/typePages/verticalPage/verticalPage.html">Вертикальные</a></li>
-                        <li><a href="/typePages/rollPage/rollPage.html">Рулонные</a></li>
-                        <li><a href="/typePages/zebraPage/zebraPage.html">Рулонные "Зебра"</a></li>
-                    </ul>
-                </li>
-                <li><a href="/servicePage/index.html" class="menu-item">Оплата и услуги</a></li>
-                <li><a href="/galleryPage/index.html" class="menu-item">Наши работы</a></li>
-                <li><a href="/aboutUs/index.html" class="menu-item">О нас</a></li>
-           </ul>
-        </div>
-        <!-- <div class="header-user-panel">
-            <a href="pageMasters/pageMasters.html" class="user-btn measurer"><i class="fas fa-ruler"></i>Личный кабинет</a>
-        </div> -->
-    </div>
+    <!-- шапка страницы -->
+    <?require $_SERVER['DOCUMENT_ROOT'].'/header.php'?>
 
-    <!-- кнопка скрыть меню -->
-    <div class="header-hide">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </div> 
 
     <!-- контейнер -->
     <div class="container">
-        <!-- блок с главныым избражением -->
         <div class="block-img main">
-            <img src="img/zebra_main_img.jpg" alt="">
+            <img src="img/vertical_main_img.jpg" alt="">
         </div>
-
-        <!-- блок описания штор -->
         <div class="discription">
             <div class="discription-inner-wrapper">
                 <div class="discription-inner-block main">
-                    <h2 class="discription-title">Рулонные шторы "Зебра"</h2>
-                    <p class="discription-paragraph">Рулонные жалюзи и шторы на пластиковые окна – практичный, стильный и недорогой вариант солнцезащитного декора. Они устанавливаются непосредственно в оконный проем, в результате подоконник остается свободным, такие конструкции требуют минимум места. При этом они могут частично приглушать или полностью перекрывать поток солнечного света. Для блокирования солнечных лучей предлагается выбрать рулонные мини-шторы из специального материала блэкаут. Они будут отлично смотреться и гармонично впишутся в любое пространство.</p>
+                    <h2 class="discription-title">Вертикальные шторы на пластиковые окна</h2>
+                    <p class="discription-paragraph">«Вертикальные жалюзи - это стильное, практичное и функциональное изделие для оформления окон. С их помощью можно добиться в комнате нужного освещения, так как ламели жалюзи поворачиваются вокруг своей оси. Помимо этого, их можно сдвигать в любую сторону. Они отлично подходят для домашнего классического интерьера, офисных помещений, при оформлении современных интерьеров рабочего кабинета или уютной спальни.</p>
                 </div>  
             </div>
         </div>
-        <!-- блок с типами штор -->
+
         <div class="systems">
             <div class="systems-wrapper">
-                <h2 class="discription-subtitle discription-subtitle__systems">Системы рулонных штор</h2>
+                <h2 class="discription-subtitle discription-subtitle__systems">Разновидности вертикальных жалюзи</h2>
                 <div class="type-system __frame">
-                    <h3 class="system-title __in-frame" >Для установки на оконную раму предлагается 2 типа рулонных штор на заказ</h3>
+                    <h3 class="system-title __in-frame">Мы предоставляем на выбор 3 основных типа штор  </h3>
                     <div class="frame-items">
-                        <div class="item MINI">
+                        <div class="item">
                             <div class="item-img">
-                                <img src="img/zebra_mini.jpg" alt="">
+                                <img src="img/vertical_cloth.jpg" alt="">
                             </div>
                             <div class="item-discription">
-                                <h3 class="item-title">MINI</h3>
-                                <p>Это наиболее простой и недорогой вариант, он предполагает монтаж штор в оконный проем без использования направляющих и специального короба. Дополнительно можно автоматизировать поднимание и опускание штор</p>
+                                <h3 class="item-title">Ткань</h3>
+                                <p>Тканевые виды станут оптимальным вариантом для домашнего использования, где нет резких перепадов температур. По фактуре их можно разделить на две категории: гладкие и рельефные. Кроме того, важна плотность материала, некоторые используют тонкие, полупрозрачные ткани, другие – высокой плотности, которые полностью перекрывают доступ света в помещение.</p>
                             </div>
                         </div>
-                        <div class="item UNI">
+                        <div class="item">
                             <div class="item-img">
-                                <img src="img/zebra_uni.jpg" alt="">
+                                <img src="img/vertical_plastic.jpg" alt="">
                             </div>
                             <div class="item-discription">
-                                <h3 class="item-title">UNI</h3>
-                                <p>Вариант предусматривает установку декоративного короба, в котором будет скрываться свернутая штора. Фурнитура предлагается в широкой цветовой гамме. Возможна установка на скотч или с помощью сверлени</p>
+                                <h3 class="item-title">Пластик</h3>
+                                <p>Самые распространенные и популярные среди жалюзи. Они используются в любых помещениях, включая места с высокими требованиями по безопасности. Гладкая поверхность ПВХ позволяет наносить яркий рисунок любой сложности. Заказать жалюзи с рисунком можно в нашей компании.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item-img">
+                                <img src="img/vertical_aluminium.jpg" alt="">
+                            </div>
+                            <div class="item-discription">
+                                <h3 class="item-title">Алюминий</h3>
+                                <p>Имеют привлекательный внешний вид и отличаются высокой прочностью. Жалюзи данного вида надежно защищают от солнечных лучей, долго сохраняют свой облик, не деформируются и не выцветают.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="type-system __opening">
-                    <h3 class="system-title __in-opening" >Для установки в оконный проем предлагается система Классика LVT</h3>
-                    <div class="frame-items">
-                        <div class="item MINI">
-                            <div class="item-img">
-                                <img src="img/zebra__classic_LVT.jpg" alt="">
-                            </div>
-                            <div class="item-discription">
-                                <h3 class="item-title">Классика LVT</h3>
-                                <p>Это рулонные тканевые жалюзи на окна любой площади, предусмотрен открытый вал. Установка осуществляется методом сверления.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
 
-        <!-- блок с еще одним изображением -->
         <div class="block-img preview">
-            <img src="img/zebra_prev.jpg" alt="">
+            <img src="img/vertical_prev.png" alt="">
         </div>
-
-        <!-- блок с приемуществом штор -->
         <div class="block other">
             <div class="inner-wrapper">
-                <h2 class="discription-subtitle">Преимущества рулонных штор:</h2>
+                <h2 class="discription-subtitle">Преимущества вертикальных штор:</h2>
                 <div class="list-wrapper">
                     <ul>
-                        <li>Разнообразная система управления. Можно выбрать не только на любой вкус, но и подобрать под индивидуальную особенность оконного проёма.</li>
-                        <li>Уникальная технология пропитки полотен не позволяет выгорать предметам в комнате: мебели, обоям, картинам, декоративным элементам.</li>
-                        <li>Используют любой вид ткани, начиная с шёлка и, заканчивая производными из полимеров. В этом случае появляется возможность сделать шторы по индивидуальному заказу.</li>
-                        <li>Простота в эксплуатации позволяет размещать рулонные шторы не только на окнах, но и в дверных проёмах, на лоджиях, балконах или в оранжереях.</li>
-                        <li>Возможность фиксировать полотно на любой высоте, к примеру, закрыть солнце, а полоску света оставит для цветов.</li>
-                        <li>Гармоничное сочетание с традиционными занавесками: тюлем, гардинами и шторами.</li>
-                        <li>Большой ассортимент размеров и цветов</li>
-                        <li>Не требует особенных усилий в уходе, достаточно протирать их влажной тряпкой во время уборки.</li>
+                        <li>Легкое мытье и уход</li>
+                        <li>Специальное покрытие, отталкивающее пыль и грязь</li>
+                        <li>Простой монтаж, не требующий специального оборудования</li>
+                        <li>Невысокая цена (в зависимости от выбранного материала)</li>
+                        <li>Разнообразие расцветок, фактур, рисунков.</li>
                     </ul>
                 </div>
             </div>    
         </div>
-
-        <!-- блок отображения материалов -->
         <div class="block materials">
-            <h2 class="discription-subtitle materials">Материалы рулонных штор "Зебра"</h2>
+            <h2 class="discription-subtitle materials">Материалы вертикальных жалюзи</h2>
             <div class="loader">
                 <div class="spinner">
                     <span class="ball-1"></span>
@@ -258,10 +216,12 @@
                 </div> -->
 
             </div>
-            <a href="/materialPages/zebra.html" class="more">Показать больше</a>
+            <a href="/materialPages/vertical.html" class="more">Показать больше</a>
         </div>
 
-        <!-- блок "Как заказать жалюзи?" -->
+
+
+        <!-- order -->
         <div class="block order">
             <div class="order-wrapper">
                 <h2 class="discription-subtitle">Как заказать жалюзи?</h2>
@@ -371,7 +331,7 @@
             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A8175d794635acb30806698bb23e5312ce6d6bea577924588155d58260f0f2c28&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
         </div>
     </div>
-
+    
     <!-- блок карты товара -->
     <div class="info-block">
         <div class="info-material">
@@ -396,8 +356,7 @@
                         <input type="number" class="info-calc width" placeholder="ширина, см" name="calc-width" id="">
                         <input type="number" class="info-calc height" placeholder="высота, см" name="calc-height" id="">
                       </div>
-                  
-                  </div>
+                    </div>
                   <div class="content-parameters">
                       <div class="parametr color">
                           <span>Цвет</span><span class="parametr-value color-value"></span>
@@ -460,9 +419,9 @@ title="HotLog" alt="HotLog"></a>
 </noscript>
 <!--/HotLog --> 
 </div>
-    <script src="/scripts/modalScript.js"></script>
-    <script src="/scripts/headerScript.js"></script>
-    <script src="/typePages/scripts/totalScript.js"></script>
+    <script src="/scripts/modalScript.js" defer></script>
+    <script src="/typePages/scripts/totalScript.js" defer></script>
+    <!-- <script src="/scripts/headerScript.js" defer></script> -->
     <!-- <script src="script.js"></script> -->
 </body>
 </html>

@@ -104,6 +104,7 @@ function initEmptyBasket(){
 // отрисовка содержимого страницы корзины
 function initBasket(){
     let data = JSON.parse(localStorage.getItem('basket'));
+    console.log(data.length);
     if(data.length==0){
         initEmptyBasket();
         return;
